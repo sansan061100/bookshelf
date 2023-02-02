@@ -12,21 +12,16 @@ const { nanoid } = require('nanoid');
 const listBooks = (request, h) => {
     const books = Book();
     const { reading, finished, name } = request.query;
+
     const filterBook = books.filter((book) => {
-        if (reading == undefined || finished == undefined || name == undefined) {
-            return book;
+        if (reading) {
+            return book.reading == reading;
+        } else if (finished) {
+            return book.finished == finished;
+        } else if (name) {
+            return book.name.toLowerCase().includes(name.toLowerCase());
         } else {
-            if (reading != null || reading != "") {
-                return book.reading == reading;
-            }
-
-            if (finished != null || finished != "") {
-                return book.finished == (finished == 1 ? true : false);
-            }
-
-            if (name != null || name != "") {
-                return book.indexOf(name) > -1;
-            }
+            return book;
         }
     });
 
