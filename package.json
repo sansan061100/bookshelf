@@ -10,6 +10,7 @@
   "author": "sansan061100",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^21.2.1"
+    "@hapi/hapi": "^21.2.1",
+    "nanoid": "^3.0.0"
   }
 }
