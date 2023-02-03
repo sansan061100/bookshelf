@@ -2,10 +2,10 @@
   "name": "bookshelf",
   "version": "1.0.0",
   "description": "Submission BookShelf API (Dicoding)",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/index.js",
-    "start-dev": "nodemon src/index.js"
+    "start": "node server.js",
+    "start-dev": "nodemon server.js"
   },
   "author": "sansan061100",
   "license": "ISC",

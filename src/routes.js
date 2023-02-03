@@ -1,29 +1,29 @@
-const { listBooks, addBook, detailBook, updateBook, deleteBook } = require('./handlers');
+const Books = require('./controllers/books');
 const routes = [
     {
         method: 'GET',
         path: '/books',
-        handler: listBooks,
+        handler: Books.listBooks,
     },
     {
         method: 'POST',
         path: '/books',
-        handler: addBook
+        handler: Books.addBook
     },
     {
         method: 'GET',
         path: '/books/{bookId}',
-        handler: detailBook
+        handler: Books.detailBook
     },
     {
         method: 'PUT',
         path: '/books/{bookId}',
-        handler: updateBook
+        handler: Books.updateBook
     },
     {
         method: 'DELETE',
         path: '/books/{bookId}',
-        handler: deleteBook
+        handler: Books.deleteBook
     }
 ];
 
